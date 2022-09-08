@@ -4,7 +4,3 @@
 - Luego, simular el ingreso de dos numeros.
 - Validar que solo se ingresen numeros enteros positivos.
 - Permitir ingresar 6 calculos, guardar los resultados en un array y al final del programa imprimir por consola los resultados de las operaciones guardadas en el array.
-
-- Integrantes del equipo:
-  - Denisse Maiz.
-  - Erika Oropeza.

@@ -3,7 +3,9 @@ package com.alkemy.Grupo4;
 import com.alkemy.Grupo4.entity.Empleado;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
 
@@ -74,8 +76,20 @@ public class Main {
         System.out.println("---------------------------------------");
         System.out.println("inciso 5");
 
+        System.out.println("Opcion 1");
         System.out.println("La empresa con mayor cantidad de empleados es: " + maxEmployeesCompany(empleados));
 
+        System.out.println("----------------------\nOpcion 2");
+        Map<String, Integer> contadores = new HashMap<>();
+
+        for(Empleado empleado: empleados){
+            Integer contador = contadores.get(empleado.getEmpresa());
+            contadores.put(empleado.getEmpresa(), contador == null ? 1 : ++contador);
+        }
+
+        for(String empleadoEmpresa: contadores.keySet()) {
+            System.out.println("Empresa: " + empleadoEmpresa+", cantidad: "+contadores.get(empleadoEmpresa));
+        }
 
     }
 
@@ -98,34 +112,5 @@ public class Main {
         }
         return company;
     }
-     /*  Ejercicio hecho en C
-     int numMasRepetido(int arr[]) {
 
-          int max = 0, masRep;
-
-          for(int i = 0; i < sizeof(arr); i++){
-            int cont = 0;
-            for(int j = 0; j< sizeof(arr); j++){
-              if(arr[i] == arr[j]){
-                cont++;
-              }
-            }
-
-            if(cont > max){
-              max = cont;
-              masRep = arr[i];
-            }
-          }
-
-          return masRep;
-    }
-
-    int main()
-    {
-        int nums[] = {15, 30, 12, 11, 4, 15, 80, 15};
-        printf("El numero mas repetido en el array es: %d \n", numMasRepetido(nums));
-
-        return 0;
-    }
-    */
 }

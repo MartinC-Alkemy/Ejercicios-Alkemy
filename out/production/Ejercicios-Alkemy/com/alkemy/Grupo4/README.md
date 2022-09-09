@@ -1,3 +1,9 @@
+
+GRUPO 4 INTEGRANTES:
+   - LIBIA FREITES
+   - CARLA DEVINCENZI
+
+
 ### Armar un array de empleados, cuyos elementos sean del tipo Empleado.
 *Empleado tiene las siguientes caracteristicas:*
 
